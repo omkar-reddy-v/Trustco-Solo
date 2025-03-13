@@ -96,7 +96,7 @@ nav ul li a:hover {
     color: white;
     text-align: center;
     padding: 50px;
-    margin-top: 70px;
+    margin-top: 70px; /* To prevent header overlap */
 }
 
 .hero-content {
@@ -117,74 +117,58 @@ nav ul li a:hover {
     margin-bottom: 25px;
 }
 
-/* Buttons */
-.hero-buttons {
+/* Video Section */
+#video-section {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.video-thumbnail {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    cursor: pointer;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
     display: flex;
-    gap: 15px;
+    align-items: center;
     justify-content: center;
-}
-
-.btn-primary, .btn-secondary {
-    padding: 14px 28px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-.btn-primary {
-    background-color: #007bff;
-    color: white;
-}
-
-.btn-secondary {
-    background-color: #6c757d;
-    color: white;
-}
-
-/* Hamburger Menu */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-}
-
-.hamburger span {
-    width: 30px;
-    height: 4px;
-    background: white;
-    border-radius: 5px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     header {
-        padding: 15px 30px;
-    }
-
-    nav ul {
-        display: none;
         flex-direction: column;
-        gap: 10px;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: #007bff;
-        padding: 10px;
         text-align: center;
     }
 
-    nav ul.active {
-        display: flex;
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
     }
 
     .auth-buttons {
-        display: none;
+        margin-top: 10px;
     }
 
-    .hamburger {
-        display: flex;
+    .video-thumbnail {
+        width: 80%;
     }
 }

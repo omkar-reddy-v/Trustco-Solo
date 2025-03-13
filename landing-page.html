@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Header</title>
+    <title>Video Section</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
+
+    <!-- Header Section -->
     <header>
-        <div class="logo">
-            <a href="#">Brand</a>
-        </div>
+        <div class="logo"><a href="#">My Website</a></div>
         <nav>
-            <ul class="nav-links">
+            <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
@@ -24,17 +23,13 @@
             <button class="btn login">Login</button>
             <button class="btn signup">Sign Up</button>
         </div>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
     </header>
 
+    <!-- Hero Section -->
     <section id="hero">
         <div class="hero-content">
             <h1>Welcome to Our Website</h1>
-            <p>Experience the best services with us.</p>
+            <p>Your success starts here.</p>
             <div class="hero-buttons">
                 <button class="btn-primary">Get Started</button>
                 <button class="btn-secondary">Learn More</button>
@@ -42,8 +37,17 @@
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Brand. All rights reserved.</p>
-    </footer>
+    <!-- Video Section -->
+    <section id="video-section">
+        <h2>Sales Insights</h2>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+            <div class="video-thumbnail">
+                <img src="thumbnail.jpg" alt="Sales Insights Video">
+                <div class="play-icon">&#9658;</div>
+            </div>
+        </a>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>

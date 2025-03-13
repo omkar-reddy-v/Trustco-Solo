@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector(".hamburger");
-    const navLinks = document.querySelector(".nav-links");
+    console.log("JavaScript Loaded");
 
-    hamburger.addEventListener("click", function () {
-        navLinks.classList.toggle("active");
+    const videoThumbnail = document.querySelector(".video-thumbnail");
+
+    videoThumbnail.addEventListener("click", function () {
+        console.log("Video thumbnail clicked!");
     });
 });
