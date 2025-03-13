@@ -105,7 +105,6 @@ nav ul li a:hover {
     color: white;
     text-align: center;
     padding: 50px;
-    /* margin-top: 70px; To prevent header overlap */
 }
 
 .hero-content {
@@ -129,7 +128,6 @@ nav ul li a:hover {
 /* Video Section */
 #video-section {
     text-align: center;
-    /* margin: 50px 0; */
 }
 
 .video-container {
@@ -160,41 +158,68 @@ nav ul li a:hover {
     justify-content: center;
 }
 
+/* Benefits Section */
+#benefits {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+#benefits h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.benefits-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.benefit-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-card img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.benefit-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .menu-icon {
         display: block;
     }
 
-    nav {
-        display: none;
-        width: 100%;
-        background: #007bff;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    nav ul {
+    .benefits-container {
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
     }
 
-    nav ul li {
-        padding: 10px 0;
-    }
-
-    .auth-buttons {
-        display: none;
-    }
-
-    .video-container {
+    .benefit-card {
         width: 80%;
-    }
-
-    nav.active {
-        display: block;
     }
 }
