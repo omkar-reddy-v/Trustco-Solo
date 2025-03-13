@@ -37,31 +37,46 @@ nav ul li a {
 
 /* Hero Section */
 #hero {
-    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
     padding: 50px;
-    background-color: white;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #hero h1 {
-    font-size: 2.5rem;
-    color: #007bff;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 #hero p {
-    font-size: 1.2rem;
-    margin: 10px 0;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
 }
 
 /* Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
 .btn-primary, .btn-secondary {
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    margin: 10px;
 }
 
 .btn-primary {
@@ -80,4 +95,41 @@ footer {
     background-color: #007bff;
     color: white;
     padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2.2rem;
+    }
+
+    #hero p {
+        font-size: 1.2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero {
+        padding: 30px;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+
+    #hero h1 {
+        font-size: 1.8rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
 }
