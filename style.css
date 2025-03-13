@@ -207,6 +207,63 @@ nav ul li a:hover {
     font-size: 1rem;
     color: #555;
 }
+/* Building Bridges Section */
+#building-bridges {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#building-bridges h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+#building-bridges .visual-representation {
+    margin-bottom: 30px;
+}
+
+#building-bridges .bridge-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#building-bridges .content {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+#building-bridges .content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#building-bridges .content ul li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+#building-bridges .cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#building-bridges .cta-button:hover {
+    background-color: #0056b3;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -221,5 +278,16 @@ nav ul li a:hover {
 
     .benefit-card {
         width: 80%;
+    }
+    #building-bridges .container {
+        text-align: left;
+    }
+
+    #building-bridges h2 {
+        font-size: 2rem;
+    }
+
+    #building-bridges .content ul {
+        padding-left: 20px;
     }
 }
