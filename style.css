@@ -96,7 +96,7 @@ nav ul li a:hover {
     color: white;
     text-align: center;
     padding: 50px;
-    margin-top: 70px; /* To prevent header overlap */
+    margin-top: 70px;
 }
 
 .hero-content {
@@ -142,96 +142,49 @@ nav ul li a:hover {
     color: white;
 }
 
-/* Footer */
-footer {
-    margin-top: 30px;
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
-    text-align: center;
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
 }
 
-/* Responsive Design - Tablet (max-width: 1024px) */
-@media (max-width: 1024px) {
+.hamburger span {
+    width: 30px;
+    height: 4px;
+    background: white;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
     header {
         padding: 15px 30px;
     }
 
     nav ul {
-        gap: 15px;
-    }
-
-    .auth-buttons {
-        gap: 10px;
-    }
-
-    .btn {
-        padding: 8px 14px;
-        font-size: 0.9rem;
-    }
-}
-
-/* Responsive Design - Mobile (max-width: 768px) */
-@media (max-width: 768px) {
-    header {
+        display: none;
         flex-direction: column;
-        align-items: center;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #007bff;
+        padding: 10px;
         text-align: center;
-        padding: 10px 20px;
     }
 
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
+    nav ul.active {
+        display: flex;
     }
 
     .auth-buttons {
-        margin-top: 10px;
+        display: none;
     }
 
-    .btn {
-        width: 100%;
-    }
-
-    #hero {
-        padding: 30px;
-    }
-
-    .hero-content {
-        max-width: 90%;
-        padding: 25px;
-    }
-
-    #hero h1 {
-        font-size: 2rem;
-    }
-
-    #hero p {
-        font-size: 1.2rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-    .btn-primary, .btn-secondary {
-        width: 100%;
-        padding: 10px 20px;
-    }
-}
-
-/* Responsive Design - Small Mobile (max-width: 480px) */
-@media (max-width: 480px) {
-    .hero-content {
-        padding: 20px;
-    }
-
-    #hero h1 {
-        font-size: 1.8rem;
-    }
-
-    #hero p {
-        font-size: 1rem;
+    .hamburger {
+        display: flex;
     }
 }
