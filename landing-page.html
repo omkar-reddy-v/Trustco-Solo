@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Section</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
     <!-- Header Section -->
     <header>
         <div class="logo"><a href="#">My Website</a></div>
-        <nav>
+        
+        <!-- Mobile Menu Icon -->
+        <div class="menu-icon" id="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav id="nav-menu">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -19,6 +26,7 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
+
         <div class="auth-buttons">
             <button class="btn login">Login</button>
             <button class="btn signup">Sign Up</button>
@@ -37,14 +45,12 @@
         </div>
     </section>
 
-    <!-- Video Section -->
+    <!-- Video Section (Thumbnail Only) -->
     <section id="video-section">
         <h2>Sales Insights</h2>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-            <div class="video-thumbnail">
-                <img src="thumbnail.jpg" alt="Sales Insights Video">
-                <div class="play-icon">&#9658;</div>
-            </div>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="video-container">
+            <img src="thumbnail.jpg" alt="Video Thumbnail" class="video-thumbnail">
+            <div class="play-icon">&#9658;</div>
         </a>
     </section>
 

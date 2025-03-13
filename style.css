@@ -33,6 +33,7 @@ header {
     color: white;
 }
 
+/* Navigation Menu */
 nav ul {
     list-style: none;
     display: flex;
@@ -48,6 +49,14 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #ffcc00;
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
 }
 
 /* Auth Buttons */
@@ -96,7 +105,7 @@ nav ul li a:hover {
     color: white;
     text-align: center;
     padding: 50px;
-    margin-top: 70px; /* To prevent header overlap */
+    /* margin-top: 70px; To prevent header overlap */
 }
 
 .hero-content {
@@ -120,17 +129,17 @@ nav ul li a:hover {
 /* Video Section */
 #video-section {
     text-align: center;
-    margin: 50px 0;
+    /* margin: 50px 0; */
 }
 
-.video-thumbnail {
+.video-container {
     position: relative;
     display: inline-block;
     width: 300px;
     cursor: pointer;
 }
 
-.video-thumbnail img {
+.video-thumbnail {
     width: 100%;
     border-radius: 8px;
 }
@@ -153,22 +162,39 @@ nav ul li a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
+    .menu-icon {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        background: #007bff;
+        position: absolute;
+        top: 60px;
+        left: 0;
         text-align: center;
+        padding: 10px 0;
     }
 
     nav ul {
         flex-direction: column;
         gap: 10px;
-        margin-top: 10px;
+    }
+
+    nav ul li {
+        padding: 10px 0;
     }
 
     .auth-buttons {
-        margin-top: 10px;
+        display: none;
     }
 
-    .video-thumbnail {
+    .video-container {
         width: 80%;
+    }
+
+    nav.active {
+        display: block;
     }
 }
