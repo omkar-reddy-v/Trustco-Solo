@@ -370,7 +370,41 @@ blockquote {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
 }
-
+#testimonials {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.testimonial {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+}
+.testimonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.testimonial p {
+    font-style: italic;
+    color: #555;
+}
+.testimonial h4 {
+    margin: 10px 0 5px;
+    color: #333;
+}
+.testimonial span {
+    font-size: 14px;
+    color: #777;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .menu-icon {
