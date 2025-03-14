@@ -475,7 +475,80 @@ h3 {
     font-weight: bold;
     font-size: 14px;
 }
+#cta-banner {
+    background-color: #0f0f16;
+    color: white;
+    padding: 60px 10%;
+}
+
+.cta-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Left Text Section */
+.cta-text {
+    max-width: 50%;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #ffbe46;
+    color: black;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.cta-button span {
+    margin-left: 10px;
+    font-size: 1.5rem;
+}
+
+.cta-button:hover {
+    background-color: #e6a937;
+}
+
+/* No Credit Card Text */
+.no-card {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #cccccc;
+}
+
+/* Right Image */
+.cta-image img {
+    width: 350px;
+    height: auto;
+}
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .cta-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .cta-text {
+        max-width: 100%;
+    }
+
+    .cta-image img {
+        width: 250px;
+        margin-top: 20px;
+    }
+}
 @media (max-width: 768px) {
     .menu-icon {
         display: block;
@@ -542,5 +615,19 @@ h3 {
     .blog-card {
         max-width: 100%;
     }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    .cta-image img {
+        width: 200px;
+    }
+
     
 }
