@@ -1,18 +1,36 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("JavaScript Loaded");
-
-    const videoThumbnail = document.querySelector(".video-container");
     const menuIcon = document.getElementById("menu-icon");
     const navMenu = document.getElementById("nav-menu");
+    const menuLinks = document.querySelectorAll("#nav-menu ul li a");
 
-    // Handle video thumbnail click
-    videoThumbnail.addEventListener("click", function () {
-        console.log("Video thumbnail clicked! Redirecting to video...");
-    });
-
-    // Handle menu toggle on mobile
-    menuIcon.addEventListener("click", function () {
+    menuIcon.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevent click from closing immediately
         navMenu.classList.toggle("active");
     });
+
+    // Hide menu when clicking outside
+    document.addEventListener("click", function () {
+        navMenu.classList.remove("active");
+    });
+
+    // Prevent menu from closing when clicking inside
+    navMenu.addEventListener("click", function (event) {
+        event.stopPropagation();
+    });
+
+    // Hide menu when clicking on a menu link
+    menuLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            navMenu.classList.remove("active");
+        });
+    });
 });
-document.getElementById("current-year").textContent = new Date().getFullYear();
+
+
+
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    alert("Your message has been sent successfully!");
+    this.reset();
+});
